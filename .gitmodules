@@ -1,3 +1,6 @@
 [submodule "brand"]
 	path = brand
 	url = git@github.com:OCA/brand.git
+[submodule "product-variant"]
+	path = product-variant
+	url = git@github.com:OCA/product-variant.git
