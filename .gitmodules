@@ -4,3 +4,6 @@
 [submodule "product-variant"]
 	path = product-variant
 	url = git@github.com:OCA/product-variant.git
+[submodule "product-attribute"]
+	path = product-attribute
+	url = git@github.com:OCA/product-attribute.git
