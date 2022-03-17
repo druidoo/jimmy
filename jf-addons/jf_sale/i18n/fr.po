@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* jf_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-16 10:28+0000\n"
+"PO-Revision-Date: 2022-03-16 10:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: jf_sale
+#: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
+msgid "Eyes infos"
+msgstr "Infomation sur les yeux"
+
+#. module: jf_sale
+#: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
+msgid "Left eye"
+msgstr "Œil gauche"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__left_addition
+msgid "Left eye addition"
+msgstr "Addition"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__left_axis
+msgid "Left eye axis"
+msgstr "Axe"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__left_cylinder
+msgid "Left eye cylinder"
+msgstr "Cylindre"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__left_height
+msgid "Left eye height"
+msgstr "Hauteur"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__left_pupil_gap
+msgid "Left eye pupillary gap"
+msgstr "Ecart pupillaire"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__left_sphere
+msgid "Left eye sphere"
+msgstr "Sphère"
+
+#. module: jf_sale
+#: model:ir.actions.act_window,name:jf_sale.res_partner_action_ophthalmologist
+#: model:ir.ui.menu,name:jf_sale.res_partner_menu_ophthalmologist
+msgid "Ophthalmologist"
+msgstr "Ophthalmo"
+
+#. module: jf_sale
+#: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
+msgid "Right eye"
+msgstr "Œil droit"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__right_addition
+msgid "Right eye addition"
+msgstr "Addition"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__right_axis
+msgid "Right eye axis"
+msgstr "Axe"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__right_cylinder
+msgid "Right eye cylinder"
+msgstr "Cylindre"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__right_height
+msgid "Right eye height"
+msgstr "Hauteur"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__right_pupil_gap
+msgid "Right eye pupillary gap"
+msgstr "Ecart pupillaire"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__right_sphere
+msgid "Right eye sphere"
+msgstr "Sphère"
+
+#. module: jf_sale
+#: model:ir.model,name:jf_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: jf_sale
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__use_last_eye_info
+msgid "Use last eye info"
+msgstr "Utiliser les dernières infos sur les yeux"

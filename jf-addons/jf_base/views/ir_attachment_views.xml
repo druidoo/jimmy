@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="pdf_attachment_view_form" model="ir.ui.view">
+			<field name="name">ir.attachment.form</field>
+			<field name="model">ir.attachment</field>
+			<field name="arch" type="xml">
+				<form>
+					<field name="datas" widget="pdf_viewer" readonly="1"/>
+					<footer/>
+				</form>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

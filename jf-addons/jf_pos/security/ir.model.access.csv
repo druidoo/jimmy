@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jf_pos_jf_pos,jf_pos.jf_pos,model_jf_pos_jf_pos,base.group_user,1,1,1,1
