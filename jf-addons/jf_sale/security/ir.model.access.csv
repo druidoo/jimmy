@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jf_sale_jf_sale,jf_sale.jf_sale,model_jf_sale_jf_sale,base.group_user,1,1,1,1
