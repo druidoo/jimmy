@@ -9,30 +9,40 @@
 					<sheet>
 						<group>
 							<group>
-								<field name="partner_id" invisible="1"/>
+								<field name="partner_id"/>
+								<field name="ophthalmologist_id" context="{'default_is_ophthalmologist': True}"/>
+								<field name="ophthalmologist_code"/>
+							</group>
+							<group>
 								<field name="attachment_id" invisible="1"/>
 								<field name="attachment_file" filename="attachment_name" widget="binary"/>
 								<field name="attachment_name" invisible="1"/>
+								<field name="prescription_date"/>
 							</group>
 						</group>
-						<group>
-							<group string="Left eye" name="left_eye">
-								<field name="left_sphere"/>
-								<field name="left_cylinder"/>
-								<field name="left_axis"/>
-								<field name="left_addition"/>
-								<field name="left_pupil_gap"/>
-								<field name="left_height"/>
-							</group>
-							<group string="Right eye" name="right_eye">
-								<field name="right_sphere"/>
-								<field name="right_cylinder"/>
-								<field name="right_axis"/>
-								<field name="right_addition"/>
-								<field name="right_pupil_gap"/>
-								<field name="right_height"/>
-							</group>
-						</group>
+						<notebook>
+							<page string="Measure">
+								<group>
+									<group string="Left eye" name="left_eye">
+										<field name="left_sphere"/>
+										<field name="left_cylinder"/>
+										<field name="left_axis"/>
+										<field name="left_addition"/>
+										<field name="left_pupil_gap"/>
+										<field name="left_height"/>
+									</group>
+									<group string="Right eye" name="right_eye">
+										<field name="right_sphere"/>
+										<field name="right_cylinder"/>
+										<field name="right_axis"/>
+										<field name="right_addition"/>
+										<field name="right_pupil_gap"/>
+										<field name="right_height"/>
+									</group>
+								</group>
+							
+							</page>
+						</notebook>
 					</sheet>
 				</form>
 			</field>
@@ -42,7 +52,10 @@
 			<field name="model">eye.info</field>
 			<field name="arch" type="xml">
 				<tree>
-					<field name="create_date"/>
+					<field name="partner_id"/>
+					<field name="ophthalmologist_id"/>
+					<field name="ophthalmologist_code"/>
+					<field name="prescription_date"/>
 					<field name="attachment_id" invisible="1"/>
 					<button name="action_open_prescription" string="View prescription"
 					        type="object"
@@ -50,12 +63,19 @@
 				</tree>
 			</field>
 		</record>
-		<record id="eye_info_action" model="ir.actions.act_window">
+		<record id="eye_info_action_customer" model="ir.actions.act_window">
 			<field name="name">Eyes infos</field>
 			<field name="res_model">eye.info</field>
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('partner_id', '=', active_id)]</field>
 			<field name="context">{'default_partner_id': active_id}</field>
+		</record>
+		<record id="eye_info_action" model="ir.actions.act_window">
+			<field name="name">Eyes infos</field>
+			<field name="res_model">eye.info</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[]</field>
+			<field name="context">{}</field>
 		</record>
 	</data>
 </odoo>

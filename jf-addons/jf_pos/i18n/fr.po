@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 14:59+0000\n"
-"PO-Revision-Date: 2022-03-17 14:59+0000\n"
+"POT-Creation-Date: 2022-03-18 05:41+0000\n"
+"PO-Revision-Date: 2022-03-18 05:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__attachment_file
+msgid "Attachment File"
+msgstr "Ordonnance"
+
+#. module: jf_pos
+#: model:ir.ui.menu,name:jf_pos.eye_info_menu
 #: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form
 msgid "Eyes infos"
 msgstr "Mésure"
@@ -61,6 +67,17 @@ msgid "My point of sale"
 msgstr "Mes points de vente"
 
 #. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__ophthalmologist_id
+#: model:ir.ui.menu,name:jf_pos.res_partner_menu_ophthalmologist
+msgid "Ophthalmologist"
+msgstr "Ophtalmo"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__ophthalmologist_code
+msgid "Ophthalmologist code"
+msgstr "Code de l'ophtalmo"
+
+#. module: jf_pos
 #: model:ir.model,name:jf_pos.model_pos_config
 msgid "Point of Sale Configuration"
 msgstr "Paramétrage du point de vente"
@@ -69,6 +86,21 @@ msgstr "Paramétrage du point de vente"
 #: model:ir.model,name:jf_pos.model_pos_order
 msgid "Point of Sale Orders"
 msgstr "Commandes du point de vente"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__attachment_id
+msgid "Prescription"
+msgstr "Ordonnance"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__prescription_date
+msgid "Prescription date"
+msgstr "Date de l'ordonnance"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__attachment_name
+msgid "Prescription name"
+msgstr "Ordonnance"
 
 #. module: jf_pos
 #: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form
@@ -114,3 +146,8 @@ msgstr "Equipes de vente"
 #: model:ir.model.fields,field_description:jf_pos.field_pos_order__use_last_eye_info
 msgid "Use last eye info"
 msgstr "Utiliser les dernières infos sur les yeux"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__with_prescription
+msgid "With prescription"
+msgstr "Avec ordonnance"
