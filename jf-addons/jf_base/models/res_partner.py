@@ -11,7 +11,7 @@ class ResPartner(models.Model):
     finess_number = fields.Char(string='FINESS number')
     opening_date = fields.Date(string='Opening date')
     closing_date = fields.Date(string='Closing date')
-    status = fields.Selection([('open', 'Open'), ('closed', 'Closed')])
+    status = fields.Selection([('open', 'Open'), ('closed', 'Closed')], string='Shop status')
     opening_time = fields.Char(string='Opening days and hours')
     sales_area = fields.Float(string='Sales area')
     linear_area = fields.Float(string='Linear are')
