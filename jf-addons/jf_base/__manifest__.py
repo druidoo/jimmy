@@ -7,7 +7,7 @@
     'sequence': -99,
     'author': "Arkeup",
     'website': 'https://arkeup.com',
-
+    'license': 'AGPL-3',
     'category': 'Customizations',
     'version': '1.0',
 

@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 10:05+0000\n"
-"PO-Revision-Date: 2022-03-16 10:05+0000\n"
+"POT-Creation-Date: 2022-03-17 16:29+0000\n"
+"PO-Revision-Date: 2022-03-17 16:29+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__attachment_file
+msgid "Attachment File"
+msgstr "Ordonnance"
 
 #. module: jf_base
 #: model:ir.model,name:jf_base.model_res_partner
@@ -126,6 +131,18 @@ msgid "Ophthalmologist"
 msgstr "Ophthalmo"
 
 #. module: jf_base
+#: code:addons/jf_base/models/eye_info.py:0
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__attachment_id
+#, python-format
+msgid "Prescription"
+msgstr "Ordonnance"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__attachment_name
+msgid "Prescription name"
+msgstr "Ordonnance"
+
+#. module: jf_base
 #: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form
 msgid "Right eye"
 msgstr "Œil droit"
@@ -159,3 +176,8 @@ msgstr "Ecart pupillaire"
 #: model:ir.model.fields,field_description:jf_base.field_eye_info__right_sphere
 msgid "Right eye sphere"
 msgstr "Sphère"
+
+#. module: jf_base
+#: model_terms:ir.ui.view,arch_db:jf_base.eye_info_tree
+msgid "View prescription"
+msgstr "Voir l'ordonnance"
