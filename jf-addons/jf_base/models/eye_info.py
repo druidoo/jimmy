@@ -9,7 +9,7 @@ class EyeInfo(models.Model):
     _description = 'Customer eye info'
 
     partner_id = fields.Many2one('res.partner', string='Customer', required=True)
-    ophthalmologist_id = fields.Many2one('res.partner', domain="[('is_ophthalmologist', '=', True)]", required=True)
+    ophthalmologist_id = fields.Many2one('res.partner', domain="[('type', '=', 'ophthalmologist')]", required=True)
     ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
     prescription_date = fields.Date(string="Prescription date", default=fields.Datetime.now)
     left_sphere = fields.Float(string='Left eye sphere')

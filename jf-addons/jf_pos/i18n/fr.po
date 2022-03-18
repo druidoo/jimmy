@@ -145,7 +145,7 @@ msgstr "Equipes de vente"
 #. module: jf_pos
 #: model:ir.model.fields,field_description:jf_pos.field_pos_order__use_last_eye_info
 msgid "Use last eye info"
-msgstr "Utiliser les dernières infos sur les yeux"
+msgstr "Utiliser la dernière ordonnance"
 
 #. module: jf_pos
 #: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form

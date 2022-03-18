@@ -16,8 +16,8 @@
 							<group>
 								<field name="use_last_eye_info" force_save="1"
 								       attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
-								<field name="ophthalmologist_id" context="{'default_is_ophthalmologist': True}" force_save="1"
-								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])]}"/>
+								<field name="ophthalmologist_id" context="{'default_type': 'ophthalmologist'}" force_save="1"
+								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])], 'required': [('with_prescription', '=', True)]}"/>
 								<field name="ophthalmologist_code"/>
 							</group>
 							<group>
@@ -25,10 +25,10 @@
 								        type="object" icon="fa-file" attrs="{'invisible': [('attachment_id', '=', False)]}"/>
 								<field name="attachment_id" invisible="1" force_save="1"/>
 								<field name="attachment_file" filename="attachment_name" widget="binary" class="oe_edit_only"
-								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])]}"/>
+								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])], 'required': [('with_prescription', '=', True)]}"/>
 								<field name="attachment_name" invisible="1" force_save="1"/>
 								<field name="prescription_date" force_save="1"
-								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])]}"/>
+								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])], 'required': [('with_prescription', '=', True)]}"/>
 							</group>
 						</group>
 						<group>
