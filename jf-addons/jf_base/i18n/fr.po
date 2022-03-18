@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-18 11:33+0000\n"
-"PO-Revision-Date: 2022-03-18 11:33+0000\n"
+"POT-Creation-Date: 2022-03-18 13:54+0000\n"
+"PO-Revision-Date: 2022-03-18 13:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,17 @@ msgstr "Ordonnance"
 #: model:ir.model,name:jf_base.model_attachment_mixin
 msgid "Attachment Mixin"
 msgstr "Ordonnance PJ"
+
+#. module: jf_base
+#: model:ir.model.fields.selection,name:jf_base.selection__res_partner__status__closed
+msgid "Closed"
+msgstr "Fermé"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__closing_date
+#: model:ir.model.fields,field_description:jf_base.field_res_users__closing_date
+msgid "Closing date"
+msgstr "Date de fermeture"
 
 #. module: jf_base
 #: model:ir.model,name:jf_base.model_res_partner
@@ -78,6 +89,12 @@ msgid "Eyes infos"
 msgstr "Ordonnances"
 
 #. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__finess_number
+#: model:ir.model.fields,field_description:jf_base.field_res_users__finess_number
+msgid "FINESS number"
+msgstr "N° FINESS"
+
+#. module: jf_base
 #: model:ir.model.fields,field_description:jf_base.field_eye_info__id
 msgid "ID"
 msgstr ""
@@ -92,12 +109,6 @@ msgstr ""
 "Les adresses de facturation et de livraison sont utilisées dans les "
 "commandes clients. Les adresses privées ne sont visibles que par les "
 "utilisateurs autorisés."
-
-#. module: jf_base
-#: model:ir.model.fields,field_description:jf_base.field_res_partner__is_ophthalmologist
-#: model:ir.model.fields,field_description:jf_base.field_res_users__is_ophthalmologist
-msgid "Is ophthalmologist"
-msgstr "Ophthalmo"
 
 #. module: jf_base
 #: model:ir.model.fields,field_description:jf_base.field_eye_info____last_update
@@ -150,9 +161,32 @@ msgid "Left eye sphere"
 msgstr "Sphère"
 
 #. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__linear_area
+#: model:ir.model.fields,field_description:jf_base.field_res_users__linear_area
+msgid "Linear are"
+msgstr "Surface linéaire"
+
+#. module: jf_base
 #: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form
 msgid "Measure"
 msgstr "Mesure"
+
+#. module: jf_base
+#: model:ir.model.fields.selection,name:jf_base.selection__res_partner__status__open
+msgid "Open"
+msgstr "Ouvert"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__opening_date
+#: model:ir.model.fields,field_description:jf_base.field_res_users__opening_date
+msgid "Opening date"
+msgstr "Date d’ouverture"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__opening_time
+#: model:ir.model.fields,field_description:jf_base.field_res_users__opening_time
+msgid "Opening days and hours"
+msgstr "Jours & horaires d’ouverture"
 
 #. module: jf_base
 #: model:ir.actions.act_window,name:jf_base.res_partner_action_ophthalmologist
@@ -223,9 +257,21 @@ msgid "Right eye sphere"
 msgstr "Sphère"
 
 #. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__sales_area
+#: model:ir.model.fields,field_description:jf_base.field_res_users__sales_area
+msgid "Sales area"
+msgstr "Surface de vente"
+
+#. module: jf_base
 #: model:ir.model.fields.selection,name:jf_base.selection__res_partner__type__shop
 msgid "Shop"
 msgstr "Boutique"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__status
+#: model:ir.model.fields,field_description:jf_base.field_res_users__status
+msgid "Status"
+msgstr "Statut"
 
 #. module: jf_base
 #: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form

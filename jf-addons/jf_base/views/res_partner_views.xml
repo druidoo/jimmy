@@ -28,11 +28,12 @@
 					<separator/>
 					<filter string="Ophthalmologist" name="ophthalmologist"
 					        domain="[('type', '=', 'ophthalmologist')]"/>
+										<separator/>
+					<filter string="Shop" name="shop" domain="[('type', '=', 'shop')]"/>
 				</xpath>
 			</field>
 		</record>
-		<record id="res_partner_action_ophthalmologist"
-		        model="ir.actions.act_window">
+		<record id="res_partner_action_ophthalmologist" model="ir.actions.act_window">
 			<field name="name">Ophthalmologist</field>
 			<field name="type">ir.actions.act_window</field>
 			<field name="res_model">res.partner</field>
