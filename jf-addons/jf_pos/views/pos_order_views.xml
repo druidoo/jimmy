@@ -7,12 +7,28 @@
 			<field name="model">pos.order</field>
 			<field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
 			<field name="arch" type="xml">
+				<xpath expr="//field[@name='fiscal_position_id']" position="after">
+					<field name="with_prescription" attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
+				</xpath>
 				<xpath expr="//page[@name='payments']" position="before">
-					<page string="Eyes infos" name="eyes_infos">
+					<page string="Eyes infos" name="eyes_infos" attrs="{'invisible': [('with_prescription', '=', False)]}">
 						<group>
 							<group>
-								<field name="use_last_eye_info"
+								<field name="use_last_eye_info" force_save="1"
 								       attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
+								<field name="ophthalmologist_id" context="{'default_is_ophthalmologist': True}" force_save="1"
+								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])]}"/>
+								<field name="ophthalmologist_code"/>
+							</group>
+							<group>
+								<field name="attachment_id" invisible="1" force_save="1"/>
+								<button name="action_open_prescription" class="oe_highlight oe_read_only" string="View prescription"
+								        type="object" icon="fa-file" attrs="{'invisible': [('attachment_id', '=', False)]}"/>
+								<field name="attachment_file" filename="attachment_name" widget="binary" class="oe_edit_only"
+								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])]}"/>
+								<field name="attachment_name" invisible="1" force_save="1"/>
+								<field name="prescription_date" force_save="1"
+								       attrs="{'readonly': ['|', ('use_last_eye_info', '=', True), ('state', 'not in', ['draft', 'paid'])]}"/>
 							</group>
 						</group>
 						<group>

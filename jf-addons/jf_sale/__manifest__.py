@@ -7,7 +7,7 @@
     'sequence': -99,
     'author': "Arkeup",
     'website': 'https://arkeup.com',
-
+    'license': 'AGPL-3',
     'category': 'Sales',
     'version': '1.0',
 
@@ -15,6 +15,7 @@
 
     'data': [
         'views/sale_order_views.xml',
-        'views/res_partner_views.xml'
+        'views/res_partner_views.xml',
+        'views/eye_info_views.xml',
     ],
 }
