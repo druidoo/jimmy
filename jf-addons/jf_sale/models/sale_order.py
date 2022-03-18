@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
-
+from odoo import models, fields, api, _
+from odoo.exceptions import UserError
 
 class SaleOrder(models.Model):
     _name = 'sale.order'
@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
     right_pupil_gap = fields.Float(string='Right eye pupillary gap', copy=False)
     right_height = fields.Float(string='Right eye height', copy=False)
     with_prescription = fields.Boolean(string="With prescription", default=False)
-    ophthalmologist_id = fields.Many2one('res.partner', domain="[('is_ophthalmologist', '=', True)]", copy=False)
+    ophthalmologist_id = fields.Many2one('res.partner', domain="[('type', '=', 'ophthalmologist')]", copy=False)
     ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
     prescription_date = fields.Date(string="Prescription date", copy=False)
 
@@ -49,28 +49,37 @@ class SaleOrder(models.Model):
                 rec.attachment_id = last_info.attachment_id
                 rec.attachment_name = last_info.attachment_name
 
-    def action_confirm(self):
-        res = super(SaleOrder, self).action_confirm()
+    @api.model
+    def create(self, values):
+        rec = super(SaleOrder, self).create(values)
+        if not rec.use_last_eye_info and rec.with_prescription:
+            self.env['eye.info'].create({
+                "partner_id": rec.partner_id.id,
+                "left_sphere": rec.left_sphere,
+                "left_cylinder": rec.left_cylinder,
+                "left_axis": rec.left_axis,
+                "left_addition": rec.left_addition,
+                "left_pupil_gap": rec.left_pupil_gap,
+                "left_height": rec.left_height,
+                "right_sphere": rec.right_sphere,
+                "right_cylinder": rec.right_cylinder,
+                "right_axis": rec.right_axis,
+                "right_addition": rec.right_addition,
+                "right_pupil_gap": rec.right_pupil_gap,
+                "right_height": rec.right_height,
+                "ophthalmologist_id": rec.ophthalmologist_id.id,
+                "prescription_date": rec.prescription_date,
+                "attachment_id": rec.attachment_id.id,
+                "attachment_name": rec.attachment_name,
+            })
+        return rec
+
+    @api.constrains('use_last_eye_info', 'with_prescription')
+    def _check_customer_prescription(self):
         for rec in self:
-            # todo add condition to create an eye info
-            if not rec.use_last_eye_info and rec.with_prescription:
-                self.env['eye.info'].create({
-                    "partner_id": rec.partner_id.id,
-                    "left_sphere": rec.left_sphere,
-                    "left_cylinder": rec.left_cylinder,
-                    "left_axis": rec.left_axis,
-                    "left_addition": rec.left_addition,
-                    "left_pupil_gap": rec.left_pupil_gap,
-                    "left_height": rec.left_height,
-                    "right_sphere": rec.right_sphere,
-                    "right_cylinder": rec.right_cylinder,
-                    "right_axis": rec.right_axis,
-                    "right_addition": rec.right_addition,
-                    "right_pupil_gap": rec.right_pupil_gap,
-                    "right_height": rec.right_height,
-                    "ophthalmologist_id": rec.ophthalmologist_id.id,
-                    "prescription_date": rec.prescription_date,
-                    "attachment_id": rec.attachment_id.id,
-                    "attachment_name": rec.attachment_name,
-                })
-        return res
+            if rec.use_last_eye_info and rec.with_prescription:
+                last_info = self.env['eye.info'].search([('partner_id', '=', rec.partner_id.id)], limit=1,
+                                                        order='prescription_date desc, id desc')
+                if not last_info:
+                    raise UserError(_("The customer %s doesn't have any prescriptions, please uncheck 'Use last "
+                                      "prescription info'") % rec.partner_id.name)

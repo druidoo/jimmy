@@ -22,7 +22,7 @@ class PosOrder(models.Model):
     right_pupil_gap = fields.Float(string='Right eye pupillary gap', copy=False)
     right_height = fields.Float(string='Right eye height', copy=False)
     with_prescription = fields.Boolean(string="With prescription", default=False)
-    ophthalmologist_id = fields.Many2one('res.partner', domain="[('is_ophthalmologist', '=', True)]", copy=False)
+    ophthalmologist_id = fields.Many2one('res.partner', domain="[('type', '=', 'ophthalmologist')]", copy=False)
     ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
     prescription_date = fields.Date(string="Prescription date", copy=False)
 
