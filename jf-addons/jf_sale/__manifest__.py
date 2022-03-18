@@ -15,6 +15,7 @@
 
     'data': [
         'views/sale_order_views.xml',
-        'views/res_partner_views.xml'
+        'views/res_partner_views.xml',
+        'views/eye_info_views.xml',
     ],
 }

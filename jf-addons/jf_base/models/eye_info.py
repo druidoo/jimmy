@@ -25,15 +25,6 @@ class EyeInfo(models.Model):
     right_pupil_gap = fields.Float(string='Right eye pupillary gap')
     right_height = fields.Float(string='Right eye height')
 
-    def action_open_prescription(self):
-        self.ensure_one()
-        return {
-            "name": _('Prescription'),
-            "type": "ir.actions.act_window",
-            "res_model": 'ir.attachment',
-            "views": [(self.env.ref('jf_base.pdf_attachment_view_form').id,
-                       "form")],
-            "view_mode": "form",
-            "res_id": self.attachment_id.id,
-            "target": "new",
-        }
+    def name_get(self):
+        return [(pre.id, '%s - %s - %s' % (_('Prescription'), pre.partner_id.name, pre.prescription_date)) for pre in
+                self]

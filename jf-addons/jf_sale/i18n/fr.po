@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-18 05:54+0000\n"
-"PO-Revision-Date: 2022-03-18 05:54+0000\n"
+"POT-Creation-Date: 2022-03-18 07:07+0000\n"
+"PO-Revision-Date: 2022-03-18 07:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,7 @@ msgid "Attachment File"
 msgstr "Ordonnance"
 
 #. module: jf_sale
+#: model:ir.ui.menu,name:jf_sale.eye_info_menu
 #: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
 msgid "Eyes infos"
 msgstr "Mesure"
@@ -130,6 +131,11 @@ msgstr "Bon de commande"
 #: model:ir.model.fields,field_description:jf_sale.field_sale_order__use_last_eye_info
 msgid "Use last eye info"
 msgstr "Utiliser les dernières infos sur les yeux"
+
+#. module: jf_sale
+#: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
+msgid "View prescription"
+msgstr "Voir l'ordonnance"
 
 #. module: jf_sale
 #: model:ir.model.fields,field_description:jf_sale.field_sale_order__with_prescription

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields
+from odoo import api, models, fields, _
 
 
 class AttachmentMixin(models.AbstractModel):
@@ -38,3 +38,16 @@ class AttachmentMixin(models.AbstractModel):
             'res_id': self.id,
         })
         return attachment_id
+
+    def action_open_prescription(self):
+        self.ensure_one()
+        return {
+            "name": _('Prescription'),
+            "type": "ir.actions.act_window",
+            "res_model": 'ir.attachment',
+            "views": [(self.env.ref('jf_base.pdf_attachment_view_form').id,
+                       "form")],
+            "view_mode": "form",
+            "res_id": self.attachment_id.id,
+            "target": "new",
+        }
