@@ -70,7 +70,7 @@ class SaleOrder(models.Model):
             "name": "Customer Reviews",
             "view_mode": "tree,form",
             "res_model": "customer.reviews",
-            "domain": [("partner_id", "=", self.partner_id.id),('order_id','=',self.id)],
+            "domain": [("partner_id", "=", self.partner_id.id),('sale_order_id','=',self.id)],
             "type": "ir.actions.act_window",
             "target": "current",
         }
