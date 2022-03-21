@@ -97,8 +97,8 @@
                 </p>
             </field>
         </record>
-        <menuitem sequence="1" name="Customer Reviews" id="customer_reviews_menu" action="action_customer_reviews"
-                  parent="contacts.menu_contacts"/>
+        <menuitem name="Customer Reviews" id="customer_reviews_menu" action="action_customer_reviews"
+                  parent="sale.sale_order_menu" sequence="5"/>
 
     </data>
 </odoo>
