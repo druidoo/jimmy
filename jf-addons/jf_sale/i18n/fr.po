@@ -24,7 +24,7 @@ msgstr "Ordonnance"
 #: model:ir.ui.menu,name:jf_sale.eye_info_menu
 #: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
 msgid "Eyes infos"
-msgstr "Mesure"
+msgstr "Mesures"
 
 #. module: jf_sale
 #: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
@@ -70,7 +70,7 @@ msgstr "Ophthalmo"
 #. module: jf_sale
 #: model:ir.model.fields,field_description:jf_sale.field_sale_order__ophthalmologist_code
 msgid "Ophthalmologist code"
-msgstr "Code de l'ophtalmo"
+msgstr "Code ophtalmo"
 
 #. module: jf_sale
 #: model:ir.model.fields,field_description:jf_sale.field_sale_order__attachment_id
