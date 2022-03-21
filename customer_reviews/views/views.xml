@@ -37,7 +37,6 @@
             </field>
         </record>
 
-
         <record model="ir.ui.view" id="customer_reviews_form_view">
             <field name="name">customer.reviews.form</field>
             <field name="model">customer.reviews</field>
