@@ -13,7 +13,7 @@
             </xpath>
 
             <xpath expr="//page[@name='other_information']" position="before">
-                <page string="Optimum" name="optimum">
+                <page string="Optimum" name="optimum" attrs="{'invisible': [('state', 'in', ['draft', 'sent'])]}">
                     <group>
                         <group>
                             <field name="optimum_state"/>
