@@ -94,7 +94,7 @@ class CustomerReview(models.Model):
     _name = "customer.reviews"
     _rec_name = 'partner_id'
 
-    review_type = fields.Selection([("order", "order"), ("after 3 months", "After 3 months")])
+    review_type = fields.Selection([("order", "order"), ("after 3 months", "After 3 months")], string="Type")
     order_id = fields.Many2one("res.partner", string="Order")
     partner_id = fields.Many2one("res.partner", string="Customer", required=True)
     message = fields.Text(string="Message")
