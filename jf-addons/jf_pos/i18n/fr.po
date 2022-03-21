@@ -67,9 +67,9 @@ msgid "My point of sale"
 msgstr "Mes points de vente"
 
 #. module: jf_pos
-#: model:ir.model.fields,field_description:jf_pos.field_pos_order__ophthalmologist_id
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__ophthalmologist_name
 #: model:ir.ui.menu,name:jf_pos.res_partner_menu_ophthalmologist
-msgid "Ophthalmologist"
+msgid "Ophthalmologist name"
 msgstr "Ophtalmo"
 
 #. module: jf_pos
