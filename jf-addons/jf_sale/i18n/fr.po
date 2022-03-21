@@ -140,7 +140,7 @@ msgstr ""
 #. module: jf_sale
 #: model:ir.model.fields,field_description:jf_sale.field_sale_order__use_last_eye_info
 msgid "Use last eye info"
-msgstr "Utiliser la dernière ordonnance"
+msgstr "Utiliser dernière ordonnance"
 
 #. module: jf_sale
 #: model_terms:ir.ui.view,arch_db:jf_sale.view_order_form
