@@ -17,7 +17,7 @@
 							<group>
 								<field name="use_last_eye_info" force_save="1"
 								       attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
-								<field name="ophthalmologist_id" context="{'default_type': 'ophthalmologist'}" force_save="1"/>
+								<field name="ophthalmologist_name" force_save="1"/>
 								<field name="ophthalmologist_code"/>
 							</group>
 							<group>
