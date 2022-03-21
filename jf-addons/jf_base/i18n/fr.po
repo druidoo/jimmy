@@ -193,7 +193,7 @@ msgstr "Jours & horaires d’ouverture"
 #: model:ir.model.fields,field_description:jf_base.field_eye_info__ophthalmologist_id
 #: model:ir.model.fields.selection,name:jf_base.selection__res_partner__type__ophthalmologist
 #: model_terms:ir.ui.view,arch_db:jf_base.view_res_partner_filter
-msgid "Ophthalmologist"
+msgid "Ophthalmologist name"
 msgstr "Ophthalmo"
 
 #. module: jf_base
