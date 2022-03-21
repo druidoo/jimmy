@@ -140,7 +140,7 @@ msgid "Number of rates"
 msgstr "Nbre d'avis"
 
 #. module: customer_reviews
-#: model:ir.model.fields,field_description:customer_reviews.field_customer_reviews__order_id
+#: model:ir.model.fields,field_description:customer_reviews.field_customer_reviews__sale_order_id
 msgid "Order"
 msgstr "Commande"
 
