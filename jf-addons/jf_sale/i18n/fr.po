@@ -62,9 +62,9 @@ msgid "Left eye sphere"
 msgstr "Sphère"
 
 #. module: jf_sale
-#: model:ir.model.fields,field_description:jf_sale.field_sale_order__ophthalmologist_id
+#: model:ir.model.fields,field_description:jf_sale.field_sale_order__ophthalmologist_name
 #: model:ir.ui.menu,name:jf_sale.res_partner_menu_ophthalmologist
-msgid "Ophthalmologist"
+msgid "Ophthalmologist name"
 msgstr "Ophthalmo"
 
 #. module: jf_sale
