@@ -10,7 +10,7 @@
 						<group>
 							<group>
 								<field name="partner_id"/>
-								<field name="ophthalmologist_id" context="{'default_type': 'ophthalmologist'}"/>
+								<field name="ophthalmologist_name"/>
 								<field name="ophthalmologist_code"/>
 							</group>
 							<group>
