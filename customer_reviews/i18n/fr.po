@@ -18,7 +18,7 @@ msgstr ""
 #. module: customer_reviews
 #: model:ir.model.fields.selection,name:customer_reviews.selection__customer_reviews__review_type__after_3_months
 msgid "After 3 months"
-msgstr ""
+msgstr "Après 3 mois"
 
 #. module: customer_reviews
 #: model:ir.model.fields,field_description:customer_reviews.field_res_partner__average_ratings
@@ -65,7 +65,7 @@ msgstr "Client"
 #. module: customer_reviews
 #: model:ir.ui.menu,name:customer_reviews.customer_review_questions_menu
 msgid "Customer Review questions"
-msgstr "Avis clients - Question"
+msgstr "Avis clients - Questions"
 
 #. module: customer_reviews
 #: model:ir.actions.act_window,name:customer_reviews.action_customer_reviews
