@@ -70,7 +70,7 @@ class SaleOrder(models.Model):
             "name": "Customer Reviews",
             "view_mode": "tree,form",
             "res_model": "customer.reviews",
-            "domain": [("partner_id", "=", self.partner_id.id)],
+            "domain": [("partner_id", "=", self.partner_id.id),('order_id','=',self.id)],
             "type": "ir.actions.act_window",
             "target": "current",
         }
@@ -83,14 +83,24 @@ class SaleOrder(models.Model):
         related="partner_id.average_ratings", store=True
     )
 
+class CustomerReviewQuestion(models.Model):
+    _name = "customer.review.questions"
+
+    name = fields.Char(string="Name")
+    question = fields.Text(string="Question")
+
+
 class CustomerReview(models.Model):
     _name = "customer.reviews"
     _rec_name = 'partner_id'
 
-
+    review_type = fields.Selection([("order", "order"), ("after 3 months", "After 3 months")])
+    order_id = fields.Many2one("res.partner", string="Order")
     partner_id = fields.Many2one("res.partner", string="Customer", required=True)
     message = fields.Text(string="Message")
     ratings = fields.Selection(
         [("0", "0"), ("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "5")],
         string="Ratings",
     )
+    customer_question_id = fields.Many2one("customer.review.questions", string="Question")
+
