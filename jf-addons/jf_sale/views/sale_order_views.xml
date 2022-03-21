@@ -11,7 +11,7 @@
 					<field name="with_prescription" attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
 				</xpath>
 				<xpath expr="//page[@name='other_information']" position="before">
-					<page string="Eyes infos" name="eyes_infos" attrs="{'invisible': [('with_prescription', '=', False)]}">
+					<page string="Eyes infos" name="eyes_infos">
 						<group>
 							<group>
 								<field name="use_last_eye_info" force_save="1"
