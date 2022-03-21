@@ -10,7 +10,7 @@ class EyeInfo(models.Model):
 
     partner_id = fields.Many2one('res.partner', string='Customer', required=True)
     ophthalmologist_name = fields.Char(string="ophthalmologist name")
-    ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
+    ophthalmologist_code = fields.Char(string="Ophthalmologist code")
     prescription_date = fields.Date(string="Prescription date", default=fields.Datetime.now)
     left_sphere = fields.Float(string='Left eye sphere')
     left_cylinder = fields.Float(string='Left eye cylinder')
