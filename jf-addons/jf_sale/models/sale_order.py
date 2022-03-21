@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
     right_pupil_gap = fields.Float(string='Right eye pupillary gap', copy=False)
     right_height = fields.Float(string='Right eye height', copy=False)
     with_prescription = fields.Boolean(string="With prescription", default=False)
-    ophthalmologist_id = fields.Many2one('res.partner', domain="[('type', '=', 'ophthalmologist')]", copy=False)
+    ophthalmologist_name = fields.Char(string="Ophthalmologist name")
     ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
     prescription_date = fields.Date(string="Prescription date", copy=False)
 
@@ -44,10 +44,11 @@ class SaleOrder(models.Model):
                 rec.right_addition = last_info.right_addition
                 rec.right_pupil_gap = last_info.right_pupil_gap
                 rec.right_height = last_info.right_height
-                rec.ophthalmologist_id = last_info.ophthalmologist_id
+                rec.ophthalmologist_name = last_info.ophthalmologist_name
                 rec.prescription_date = last_info.prescription_date
                 rec.attachment_id = last_info.attachment_id
                 rec.attachment_name = last_info.attachment_name
+                rec.ophthalmologist_code = last_info.ophthalmologist_code
 
     @api.model
     def create(self, values):
@@ -67,7 +68,7 @@ class SaleOrder(models.Model):
                 "right_addition": rec.right_addition,
                 "right_pupil_gap": rec.right_pupil_gap,
                 "right_height": rec.right_height,
-                "ophthalmologist_id": rec.ophthalmologist_id.id,
+                "ophthalmologist_name": rec.ophthalmologist_name,
                 "prescription_date": rec.prescription_date,
                 "attachment_id": rec.attachment_id.id,
                 "attachment_name": rec.attachment_name,
