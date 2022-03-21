@@ -23,7 +23,7 @@ class SaleOrder(models.Model):
     right_height = fields.Float(string='Right eye height', copy=False)
     with_prescription = fields.Boolean(string="With prescription", default=False)
     ophthalmologist_name = fields.Char(string="Ophthalmologist name")
-    ophthalmologist_code = fields.Char(string="Ophthalmologist code", readonly=True)
+    ophthalmologist_code = fields.Char(string="Ophthalmologist code")
     prescription_date = fields.Date(string="Prescription date", copy=False)
 
     @api.onchange('partner_id', 'use_last_eye_info')
