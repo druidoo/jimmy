@@ -176,7 +176,7 @@ msgstr "Avis"
 #. module: customer_reviews
 #: model:ir.model.fields,field_description:customer_reviews.field_customer_reviews__review_type
 msgid "Review Type"
-msgstr ""
+msgstr "Type"
 
 #. module: customer_reviews
 #: model:ir.model,name:customer_reviews.model_sale_order
@@ -207,4 +207,4 @@ msgstr "Avis des clients"
 #. module: customer_reviews
 #: model:ir.model.fields.selection,name:customer_reviews.selection__customer_reviews__review_type__order
 msgid "order"
-msgstr ""
+msgstr "Commande"
