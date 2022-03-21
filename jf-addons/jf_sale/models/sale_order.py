@@ -23,7 +23,7 @@ class SaleOrder(models.Model):
     right_height = fields.Float(string='Right eye height', copy=False)
     with_prescription = fields.Boolean(string="With prescription", default=False)
     ophthalmologist_name = fields.Char(string="Ophthalmologist name")
-    ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
+    ophthalmologist_code = fields.Char(string="Ophthalmologist code", readonly=True)
     prescription_date = fields.Date(string="Prescription date", copy=False)
 
     @api.onchange('partner_id', 'use_last_eye_info')
@@ -69,6 +69,7 @@ class SaleOrder(models.Model):
                 "right_pupil_gap": rec.right_pupil_gap,
                 "right_height": rec.right_height,
                 "ophthalmologist_name": rec.ophthalmologist_name,
+                "ophthalmologist_code": rec.ophthalmologist_code,
                 "prescription_date": rec.prescription_date,
                 "attachment_id": rec.attachment_id.id,
                 "attachment_name": rec.attachment_name,
