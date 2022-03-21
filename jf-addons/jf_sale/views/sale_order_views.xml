@@ -10,6 +10,7 @@
 				<xpath expr="//field[@name='sale_order_template_id']" position="after">
 					<field name="with_prescription" attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
 				</xpath>
+				
 				<xpath expr="//page[@name='other_information']" position="before">
 					<page string="Eyes infos" name="eyes_infos">
 						<group>
