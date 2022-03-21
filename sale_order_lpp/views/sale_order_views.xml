@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="sale_view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                <field name="lpp_code" optional="show"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="after">
+                <field name="rss_amount" optional="show"/>
+            </xpath>
+
+            <xpath expr="//page[@name='other_information']" position="before">
+                <page string="Optimum" name="optimum">
+                    <group>
+                        <group>
+                            <field name="optimum_state"/>
+                            <field name="optimum_url" widget="url"/>
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                        <group>
+                            <field name="optimum_message"/>
+                        </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_quotation_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="optimum_state" decoration-success="optimum_state == 'done'" decoration-warning="optimum_state == 'in_progress'"
+                       decoration-danger="optimum_state == 'refused'" widget="badge" optional="show"/>
+            </xpath>
+            <tree position="attributes">
+                <attribute name="decoration-success">
+                    optimum_state == 'done'
+                </attribute>
+                 <attribute name="decoration-warning">
+                    optimum_state == 'in_progress'
+                </attribute>
+                 <attribute name="decoration-danger">
+                    optimum_state == 'refused'
+                </attribute>
+            </tree>
+
+        </field>
+    </record>
+</odoo>
