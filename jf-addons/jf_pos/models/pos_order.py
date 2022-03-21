@@ -23,7 +23,7 @@ class PosOrder(models.Model):
     right_height = fields.Float(string='Right eye height', copy=False)
     with_prescription = fields.Boolean(string="With prescription", default=False)
     ophthalmologist_name = fields.Char(string="Ophthalmologist name")
-    ophthalmologist_code = fields.Char(related="ophthalmologist_id.ref", string="Ophthalmologist code", readonly=True)
+    ophthalmologist_code = fields.Char(string="Ophthalmologist code")
     prescription_date = fields.Date(string="Prescription date", copy=False)
 
     @api.onchange('partner_id', 'use_last_eye_info')
@@ -48,6 +48,7 @@ class PosOrder(models.Model):
                 rec.prescription_date = last_info.prescription_date
                 rec.attachment_id = last_info.attachment_id
                 rec.attachment_name = last_info.attachment_name
+                rec.ophthalmologist_code = last_info.ophthalmologist_code
 
     @api.model
     def _process_order(self, order, draft, existing_order):
