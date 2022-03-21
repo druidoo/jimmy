@@ -106,8 +106,6 @@
         <menuitem name="Customer Reviews" id="customer_reviews_menu" action="action_customer_reviews"
                   parent="sale.sale_order_menu" sequence="5"/>
 
-
-
          <record model="ir.ui.view" id="customer_review_questions_tree_view">
             <field name="name">customer.review.questions.tree</field>
             <field name="model">customer.review.questions</field>

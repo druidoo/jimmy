@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="view_pos_config_search" model="ir.ui.view">
+			<field name="name">pos.config.search</field>
+			<field name="model">pos.config</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_config_search"/>
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='inactive']" position="before">
+					<filter string="My point of sale" name="my_pos"
+					        domain="[('team_user_ids', 'in', [uid])]"/>
+					<separator/>
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="point_of_sale.action_pos_config_kanban"
+		        model="ir.actions.act_window">
+			<field name="context">{'search_default_my_pos':1}</field>
+		</record>
+	
+	</data>
+</odoo>
