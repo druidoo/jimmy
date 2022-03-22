@@ -142,7 +142,7 @@ msgstr "Nbre d'avis"
 #. module: customer_reviews
 #: model:ir.model.fields,field_description:customer_reviews.field_customer_reviews__sale_order_id
 msgid "Order"
-msgstr "Commande"
+msgstr "Lien commande"
 
 #. module: customer_reviews
 #: model:ir.model.fields,field_description:customer_reviews.field_res_partner__partner_review_ids
@@ -176,7 +176,7 @@ msgstr "Avis"
 #. module: customer_reviews
 #: model:ir.model.fields,field_description:customer_reviews.field_customer_reviews__review_type
 msgid "Review Type"
-msgstr "Type"
+msgstr "Type de sondage "
 
 #. module: customer_reviews
 #: model:ir.model,name:customer_reviews.model_sale_order
