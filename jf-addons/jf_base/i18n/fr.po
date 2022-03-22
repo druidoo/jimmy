@@ -1,0 +1,281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* jf_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-18 14:14+0000\n"
+"PO-Revision-Date: 2022-03-18 14:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__type
+#: model:ir.model.fields,field_description:jf_base.field_res_users__type
+msgid "Address Type"
+msgstr "Type d'adresse"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_attachment_mixin__attachment_file
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__attachment_file
+msgid "Attachment File"
+msgstr "Ordonnance"
+
+#. module: jf_base
+#: model:ir.model,name:jf_base.model_attachment_mixin
+msgid "Attachment Mixin"
+msgstr "Ordonnance PJ"
+
+#. module: jf_base
+#: model:ir.model.fields.selection,name:jf_base.selection__res_partner__status__closed
+msgid "Closed"
+msgstr "Fermé"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__closing_date
+#: model:ir.model.fields,field_description:jf_base.field_res_users__closing_date
+msgid "Closing date"
+msgstr "Date de fermeture"
+
+#. module: jf_base
+#: model:ir.model,name:jf_base.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: jf_base
+#: model:ir.model,name:jf_base.model_eye_info
+msgid "Customer eye info"
+msgstr "Ordonnances"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__eye_info_count
+#: model:ir.model.fields,field_description:jf_base.field_res_users__eye_info_count
+msgid "Eye Info Count"
+msgstr "Nombre d'ordonnances"
+
+#. module: jf_base
+#: model:ir.actions.act_window,name:jf_base.eye_info_action
+#: model:ir.actions.act_window,name:jf_base.eye_info_action_customer
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__eye_info_ids
+#: model:ir.model.fields,field_description:jf_base.field_res_users__eye_info_ids
+#: model_terms:ir.ui.view,arch_db:jf_base.view_partner_form
+msgid "Eyes infos"
+msgstr "Ordonnances"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__finess_number
+#: model:ir.model.fields,field_description:jf_base.field_res_users__finess_number
+msgid "FINESS number"
+msgstr "N° FINESS"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__id
+msgid "ID"
+msgstr ""
+
+#. module: jf_base
+#: model:ir.model.fields,help:jf_base.field_res_partner__type
+#: model:ir.model.fields,help:jf_base.field_res_users__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+"Les adresses de facturation et de livraison sont utilisées dans les "
+"commandes clients. Les adresses privées ne sont visibles que par les "
+"utilisateurs autorisés."
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: jf_base
+#: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form
+msgid "Left eye"
+msgstr "Œil gauche"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__left_addition
+msgid "Left eye addition"
+msgstr "Addition"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__left_axis
+msgid "Left eye axis"
+msgstr "Axe"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__left_cylinder
+msgid "Left eye cylinder"
+msgstr "Cylindre"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__left_height
+msgid "Left eye height"
+msgstr "Hauteur"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__left_pupil_gap
+msgid "Left eye pupillary gap"
+msgstr "Ecart pupillaire"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__left_sphere
+msgid "Left eye sphere"
+msgstr "Sphère"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__linear_area
+#: model:ir.model.fields,field_description:jf_base.field_res_users__linear_area
+msgid "Linear are"
+msgstr "Surface linéaire"
+
+#. module: jf_base
+#: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form
+msgid "Measure"
+msgstr "Mesure"
+
+#. module: jf_base
+#: model:ir.model.fields.selection,name:jf_base.selection__res_partner__status__open
+msgid "Open"
+msgstr "Ouvert"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__opening_date
+#: model:ir.model.fields,field_description:jf_base.field_res_users__opening_date
+msgid "Opening date"
+msgstr "Date d’ouverture"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__opening_time
+#: model:ir.model.fields,field_description:jf_base.field_res_users__opening_time
+msgid "Opening days and hours"
+msgstr "Jours & horaires d’ouverture"
+
+#. module: jf_base
+#: model:ir.actions.act_window,name:jf_base.res_partner_action_ophthalmologist
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__ophthalmologist_name
+#: model:ir.model.fields.selection,name:jf_base.selection__res_partner__type__ophthalmologist
+#: model_terms:ir.ui.view,arch_db:jf_base.view_res_partner_filter
+msgid "Ophthalmologist name"
+msgstr "Ophthalmo"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__ophthalmologist_code
+msgid "Ophthalmologist code"
+msgstr "Code de l'ophtalmo"
+
+#. module: jf_base
+#: code:addons/jf_base/models/attachment_mixin.py:0
+#: code:addons/jf_base/models/eye_info.py:0
+#: model:ir.model.fields,field_description:jf_base.field_attachment_mixin__attachment_id
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__attachment_id
+#, python-format
+msgid "Prescription"
+msgstr "Ordonnance"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__prescription_date
+msgid "Prescription date"
+msgstr "Date de l'ordonnance"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_attachment_mixin__attachment_name
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__attachment_name
+msgid "Prescription name"
+msgstr "Ordonnance"
+
+#. module: jf_base
+#: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form
+msgid "Right eye"
+msgstr "Œil droit"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__right_addition
+msgid "Right eye addition"
+msgstr "Addition"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__right_axis
+msgid "Right eye axis"
+msgstr "Axe"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__right_cylinder
+msgid "Right eye cylinder"
+msgstr "Cylindre"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__right_height
+msgid "Right eye height"
+msgstr "Hauteur"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__right_pupil_gap
+msgid "Right eye pupillary gap"
+msgstr "Ecart pupillaire"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_eye_info__right_sphere
+msgid "Right eye sphere"
+msgstr "Sphère"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__sales_area
+#: model:ir.model.fields,field_description:jf_base.field_res_users__sales_area
+msgid "Sales area"
+msgstr "Surface de vente"
+
+#. module: jf_base
+#: model:ir.model.fields.selection,name:jf_base.selection__res_partner__type__shop
+#: model_terms:ir.ui.view,arch_db:jf_base.view_res_partner_filter
+msgid "Shop"
+msgstr "Boutique"
+
+#. module: jf_base
+#: model:ir.model.fields,field_description:jf_base.field_res_partner__status
+#: model:ir.model.fields,field_description:jf_base.field_res_users__status
+msgid "Shop status"
+msgstr "Statut"
+
+#. module: jf_base
+#: model_terms:ir.ui.view,arch_db:jf_base.eye_info_form
+#: model_terms:ir.ui.view,arch_db:jf_base.eye_info_tree
+msgid "View prescription"
+msgstr "Voir l'ordonnance"

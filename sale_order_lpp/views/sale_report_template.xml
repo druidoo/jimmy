@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+          <th name="th_taxes" position="after">
+              <th name="th_code_lpp" class="text-right">Code LPP</th>
+               <th name="th_rss_amount" class="text-right">RSS</th>
+          </th>
+         <td name="td_taxes" position="after">
+              <td name="td_lpp_code" class="text-right">
+                  <span t-field="line.lpp_code"/>
+              </td>
+               <td name="td_rss_amount" class="text-right">
+                  <span t-field="line.rss_amount"/>
+              </td>
+          </td>
+
+    <div name="signature" position="replace">
+        <div class="row">
+        <div t-if="doc.user_id.company_id.signature or doc.user_id.signature" id="signature_user" class="text-center col-6">
+                <div>
+                    <strong>Signature Jimmy Fairly:</strong>
+                </div>
+                <div>
+                    <img t-att-src="image_data_uri(doc.user_id.company_id.signature or doc.user_id.signature)" style="max-height: 2cm; max-width: 4cm;"/>
+                </div>
+                <div class="text-center">
+                    <p t-esc="doc.user_id.company_id.signed_by or doc.user_id.name"/>
+                </div>
+            </div>
+        <div t-if="doc.signature" class="text-center col-6" name="signature">
+                <div>
+                    <strong>Signature Customer:</strong>
+                </div>
+                <div>
+                    <img t-att-src="image_data_uri(doc.signature)" style="max-height: 2cm; max-width: 4cm;"/>
+                </div>
+                <div class="text-center">
+                    <p t-field="doc.signed_by"/>
+                </div>
+            </div>
+    </div>
+    </div>
+
+
+</template>
+</odoo>

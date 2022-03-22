@@ -1,0 +1,164 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* jf_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-18 14:02+0000\n"
+"PO-Revision-Date: 2022-03-18 14:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__attachment_file
+msgid "Attachment File"
+msgstr "Ordonnance"
+
+#. module: jf_pos
+#: model:ir.ui.menu,name:jf_pos.eye_info_menu
+#: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form
+msgid "Eyes infos"
+msgstr "Mesure"
+
+#. module: jf_pos
+#: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form
+msgid "Left eye"
+msgstr "Œil gauche"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__left_addition
+msgid "Left eye addition"
+msgstr "Addition"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__left_axis
+msgid "Left eye axis"
+msgstr "Axe"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__left_cylinder
+msgid "Left eye cylinder"
+msgstr "Cylindre"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__left_height
+msgid "Left eye height"
+msgstr "Hauteur"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__left_pupil_gap
+msgid "Left eye pupillary gap"
+msgstr "Ecart pupillaire"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__left_sphere
+msgid "Left eye sphere"
+msgstr "Sphère"
+
+#. module: jf_pos
+#: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_config_search
+msgid "My point of sale"
+msgstr "Mes points de vente"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__ophthalmologist_name
+#: model:ir.ui.menu,name:jf_pos.res_partner_menu_ophthalmologist
+msgid "Ophthalmologist name"
+msgstr "Ophtalmo"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__ophthalmologist_code
+msgid "Ophthalmologist code"
+msgstr "Code de l'ophtalmo"
+
+#. module: jf_pos
+#: model:ir.model,name:jf_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Paramétrage du point de vente"
+
+#. module: jf_pos
+#: model:ir.model,name:jf_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Commandes du point de vente"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__attachment_id
+msgid "Prescription"
+msgstr "Ordonnance"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__prescription_date
+msgid "Prescription date"
+msgstr "Date de l'ordonnance"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__attachment_name
+msgid "Prescription name"
+msgstr "Ordonnance"
+
+#. module: jf_pos
+#: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form
+msgid "Right eye"
+msgstr "Œil droit"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__right_addition
+msgid "Right eye addition"
+msgstr "Addition"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__right_axis
+msgid "Right eye axis"
+msgstr "Axe"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__right_cylinder
+msgid "Right eye cylinder"
+msgstr "Cylindre"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__right_height
+msgid "Right eye height"
+msgstr "Hauteur"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__right_pupil_gap
+msgid "Right eye pupillary gap"
+msgstr "Ecart pupillaire"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__right_sphere
+msgid "Right eye sphere"
+msgstr "Sphère"
+
+#. module: jf_pos
+#: model:ir.actions.act_window,name:jf_pos.res_partner_action_shop
+#: model:ir.ui.menu,name:jf_pos.res_partner_menu_shop
+msgid "Shop"
+msgstr "Boutique"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_config__team_user_ids
+msgid "Team User"
+msgstr "Equipes de vente"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__use_last_eye_info
+msgid "Use last eye info"
+msgstr "Utiliser la dernière ordonnance"
+
+#. module: jf_pos
+#: model_terms:ir.ui.view,arch_db:jf_pos.view_pos_pos_form
+msgid "View prescription"
+msgstr "Voir l'ordonnance"
+
+#. module: jf_pos
+#: model:ir.model.fields,field_description:jf_pos.field_pos_order__with_prescription
+msgid "With prescription"
+msgstr "Avec ordonnance"
