@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_lpp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-22 13:04+0000\n"
+"PO-Revision-Date: 2022-03-22 13:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_lpp
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.report_saleorder_document_inherit
+msgid "<strong>Signature Customer:</strong>"
+msgstr "<strong>Signature du client:</strong>"
+
+#. module: sale_order_lpp
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.report_saleorder_document_inherit
+msgid "<strong>Signature Jimmy Fairly:</strong>"
+msgstr "<strong>Signature de Jimmy Fairly:</strong>"
+
+#. module: sale_order_lpp
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.report_saleorder_document_inherit
+msgid "Code LPP"
+msgstr ""
+
+#. module: sale_order_lpp
+#: model:ir.model,name:sale_order_lpp.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields.selection,name:sale_order_lpp.selection__pos_order__optimum_state__done
+#: model:ir.model.fields.selection,name:sale_order_lpp.selection__sale_order__optimum_state__done
+msgid "Done"
+msgstr "Faite"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields.selection,name:sale_order_lpp.selection__pos_order__optimum_state__in_progress
+#: model:ir.model.fields.selection,name:sale_order_lpp.selection__sale_order__optimum_state__in_progress
+msgid "In progress"
+msgstr "En cours"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_pos_order_line__lpp_code
+#: model:ir.model.fields,field_description:sale_order_lpp.field_product_product__lpp_code
+#: model:ir.model.fields,field_description:sale_order_lpp.field_product_template__lpp_code
+#: model:ir.model.fields,field_description:sale_order_lpp.field_sale_order_line__lpp_code
+msgid "LPP code"
+msgstr ""
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,help:sale_order_lpp.field_res_company__signed_by
+msgid "Name of the person that signed the SO."
+msgstr ""
+
+#. module: sale_order_lpp
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.sale_view_order_form
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.view_pos_pos_form
+msgid "Optimum"
+msgstr "Info optimum"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_pos_order__optimum_state
+#: model:ir.model.fields,field_description:sale_order_lpp.field_sale_order__optimum_state
+msgid "Optimum State"
+msgstr "État de télétransmission"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_pos_order__optimum_url
+#: model:ir.model.fields,field_description:sale_order_lpp.field_sale_order__optimum_url
+msgid "Optimum URL"
+msgstr "URL"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_pos_order__optimum_message
+#: model:ir.model.fields,field_description:sale_order_lpp.field_sale_order__optimum_message
+msgid "Optimum message"
+msgstr "Message"
+
+#. module: sale_order_lpp
+#: model:ir.model,name:sale_order_lpp.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Lignes des commandes du point de vente"
+
+#. module: sale_order_lpp
+#: model:ir.model,name:sale_order_lpp.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Commandes du point de vente"
+
+#. module: sale_order_lpp
+#: model:ir.model,name:sale_order_lpp.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: sale_order_lpp
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.report_saleorder_document_inherit
+msgid "RSS"
+msgstr "BRSS"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_pos_order_line__rss_amount
+#: model:ir.model.fields,field_description:sale_order_lpp.field_product_product__rss_amount
+#: model:ir.model.fields,field_description:sale_order_lpp.field_product_template__rss_amount
+#: model:ir.model.fields,field_description:sale_order_lpp.field_sale_order_line__rss_amount
+msgid "RSS Amount"
+msgstr "BRSS"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields.selection,name:sale_order_lpp.selection__pos_order__optimum_state__refused
+#: model:ir.model.fields.selection,name:sale_order_lpp.selection__sale_order__optimum_state__refused
+msgid "Refused"
+msgstr "Refusée"
+
+#. module: sale_order_lpp
+#: model:ir.model,name:sale_order_lpp.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: sale_order_lpp
+#: model:ir.model,name:sale_order_lpp.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_res_company__signature
+#: model_terms:ir.ui.view,arch_db:sale_order_lpp.view_users_form
+msgid "Signature"
+msgstr "Signature"
+
+#. module: sale_order_lpp
+#: model:ir.model.fields,field_description:sale_order_lpp.field_res_company__signed_by
+msgid "Signed By"
+msgstr "Signé par"
