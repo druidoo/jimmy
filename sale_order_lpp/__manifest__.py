@@ -11,6 +11,7 @@
     "data": ["security/ir.model.access.csv",
              "views/product_template_views.xml",
              "views/sale_order_views.xml",
+             "views/pos_order_views.xml",
              "views/sale_report_template.xml",
              "views/res_users_views.xml",
              "views/res_company_views.xml",

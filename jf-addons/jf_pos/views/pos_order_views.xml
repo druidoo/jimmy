@@ -14,8 +14,7 @@
 					<page string="Eyes infos" name="eyes_infos" attrs="{'invisible': [('with_prescription', '=', False)]}">
 						<group>
 							<group>
-								<field name="use_last_eye_info" force_save="1"
-								       attrs="{'readonly': [('state', 'not in', ['draft', 'paid'])]}"/>
+								<field name="use_last_eye_info" force_save="1"/>
 								<field name="ophthalmologist_name"/>
 								<field name="ophthalmologist_code"/>
 							</group>
