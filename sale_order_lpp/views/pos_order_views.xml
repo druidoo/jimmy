@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="sale_view_order_form" model="ir.ui.view">
-        <field name="name">sale.order.form</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
+    <record id="view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.order.form</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+            <xpath expr="//field[@name='lines']/tree/field[@name='full_product_name']" position="after">
                 <field name="lpp_code" optional="show"/>
             </xpath>
-            <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="after">
+            <xpath expr="//field[@name='lines']/tree/field[@name='price_subtotal']" position="after">
                 <field name="rss_amount" optional="show"/>
             </xpath>
 
-            <xpath expr="//page[@name='other_information']" position="before">
+            <xpath expr="//page[@name='extra']" position="before">
                 <page string="Optimum" name="optimum">
                     <group>
                         <group>
