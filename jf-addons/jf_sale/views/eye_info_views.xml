@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem id="eye_info_menu"
+		          action="jf_base.eye_info_action"
+		          parent="sale.sale_order_menu" sequence="6"/>
+	</data>
+</odoo>
