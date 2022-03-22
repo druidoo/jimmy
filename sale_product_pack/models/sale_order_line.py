@@ -63,6 +63,8 @@ class SaleOrderLine(models.Model):
                     vals_list.append(vals)
             if vals_list:
                 self.create(vals_list)
+            if self.product_id.pack_line_ids.mapped('sale_percentage'):
+                self.write({'price_unit': price_unit, 'tax_id': tax_id})
 
     @api.model
     def create(self, vals):
