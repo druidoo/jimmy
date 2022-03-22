@@ -76,12 +76,34 @@ class SaleOrder(models.Model):
         }
 
     number_of_rates = fields.Integer(
-        related="partner_id.number_of_rates", store=True
+        compute="_compute_rates_number", string="Number of rates", store=True
     )
     average_ratings = fields.Selection(
         [("0", "0"), ("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "5")],
-        related="partner_id.average_ratings", store=True
+        compute="_compute_ratings",
+        store=True,
     )
+    
+    @api.depends("partner_id.partner_review_ids.ratings",
+                 "partner_id.partner_review_ids.sale_order_id")
+    def _compute_ratings(self):
+        for rec in self:
+            reviews = self.env["customer.reviews"].search([("partner_id", "=", rec.partner_id.id), ('sale_order_id','=', rec.id)])
+            ratings = 0
+            for review in reviews:
+                if review.ratings != "0":
+                    ratings = ratings + int(review.ratings)
+            if ratings != 0:
+                ratings = ratings / len(reviews)
+            rec.average_ratings = str(int(ratings))
+
+    @api.depends("partner_id.partner_review_ids.sale_order_id")
+    def _compute_rates_number(self):
+        for rec in self:
+            partner_review_ids = self.env["customer.reviews"].search(
+               [("partner_id", "=", rec.partner_id.id), ('sale_order_id','=', rec.id)]
+            )
+            rec.number_of_rates = len(partner_review_ids)
 
 class CustomerReviewQuestion(models.Model):
     _name = "customer.review.questions"
