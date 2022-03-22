@@ -30,14 +30,16 @@ class AttachmentMixin(models.AbstractModel):
 
     def _create_prescription_attachment(self):
         self.ensure_one()
-        attachment_id = self.env['ir.attachment'].create({
-            'name': self.attachment_name,
-            'datas': self.attachment_file,
-            'type': 'binary',
-            'res_model': self._name,
-            'res_id': self.id,
-        })
-        return attachment_id
+        if self.attachment_name and self.attachment_file:
+            attachment_id = self.env['ir.attachment'].create({
+                'name': self.attachment_name,
+                'datas': self.attachment_file,
+                'type': 'binary',
+                'res_model': self._name,
+                'res_id': self.id,
+            })
+            return attachment_id
+        return False
 
     def action_open_prescription(self):
         self.ensure_one()
