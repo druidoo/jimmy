@@ -7,8 +7,7 @@ class PosOrder(models.Model):
     _name = 'pos.order'
     _inherit = ['pos.order', 'attachment.mixin']
 
-    use_last_eye_info = fields.Boolean(string='Use last eye info',
-                                       default=True)
+    use_last_eye_info = fields.Boolean(string='Use last eye info')
     left_sphere = fields.Float(string='Left eye sphere', copy=False)
     left_cylinder = fields.Float(string='Left eye cylinder', copy=False)
     left_axis = fields.Float(string='Left eye axis', copy=False)
