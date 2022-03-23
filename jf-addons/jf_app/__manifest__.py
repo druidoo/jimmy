@@ -11,7 +11,7 @@
     'category': 'Customizations',
     'version': '1.0',
 
-    'depends': ['jf_sale', 'jf_pos', 'jf_documents'],
+    'depends': ['jf_sale', 'jf_pos', 'jf_documents', 'jf_account'],
 
     'data': [],
     'application': True,

@@ -5,25 +5,6 @@
 		          action="jf_base.res_partner_action_ophthalmologist"
 		          parent="point_of_sale.menu_point_of_sale" sequence="101"/>
 		
-		<record id="res_partner_shop_form" model="ir.ui.view">
-			<field name="name">res.partner.form</field>
-			<field name="model">res.partner</field>
-			<field name="inherit_id" ref="point_of_sale.view_partner_property_form"/>
-			<field name="arch" type="xml">
-				<xpath expr="//group[@name='point_of_sale']" position="inside">
-					<field name="opening_date" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-					<field name="closing_date" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-					<field name="status" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-					<field name="opening_time" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-					<field name="sales_area" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-					<field name="linear_area" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-				</xpath>
-				<xpath expr="//field[@name='vat']" position="after">
-					<field name="finess_number" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
-				</xpath>
-			</field>
-		</record>
-		
 		<record id="res_partner_action_shop" model="ir.actions.act_window">
 			<field name="name">Shop</field>
 			<field name="type">ir.actions.act_window</field>

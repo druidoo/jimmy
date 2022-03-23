@@ -12,9 +12,10 @@ class ResPartner(models.Model):
     opening_date = fields.Date(string='Opening date')
     closing_date = fields.Date(string='Closing date')
     status = fields.Selection([('open', 'Open'), ('closed', 'Closed')], string='Shop status')
-    opening_time = fields.Char(string='Opening days and hours')
+    opening_time = fields.Text(string='Opening days and hours')
     sales_area = fields.Float(string='Sales area')
     linear_area = fields.Float(string='Linear are')
+    social_security_number = fields.Char(string='Social security number')
 
     @api.depends('eye_info_ids')
     def _compute_eye_info_count(self):
