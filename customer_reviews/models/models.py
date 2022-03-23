@@ -107,6 +107,7 @@ class SaleOrder(models.Model):
 
 class CustomerReviewQuestion(models.Model):
     _name = "customer.review.questions"
+    _description = "Customer review questions"
 
     name = fields.Char(string="Name")
     question = fields.Text(string="Question")
@@ -115,6 +116,7 @@ class CustomerReviewQuestion(models.Model):
 class CustomerReview(models.Model):
     _name = "customer.reviews"
     _rec_name = 'partner_id'
+    _description = "Customer reviews"
 
     review_type = fields.Selection([("order", "order"), ("after 3 months", "After 3 months")], string="Type")
     sale_order_id = fields.Many2one("sale.order", string="Order", domain="[('partner_id','=',partner_id)]")
