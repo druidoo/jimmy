@@ -7,7 +7,7 @@ class ResPartner(models.Model):
 
     eye_info_ids = fields.One2many('eye.info', 'partner_id', string='Eyes infos')
     eye_info_count = fields.Integer(compute='_compute_eye_info_count')
-    type = fields.Selection(selection_add=[('shop', 'Shop'), ('ophthalmologist', 'Ophthalmologist')])
+    type = fields.Selection(selection_add=[('shop', 'Shop')])
     finess_number = fields.Char(string='FINESS number')
     opening_date = fields.Date(string='Opening date')
     closing_date = fields.Date(string='Closing date')
