@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_partner_property_form" model="ir.ui.view">
+			<field name="name">res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="account.view_partner_property_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='accounting']" position="attributes">
+					<attribute name="attrs">{'invisible': ['|', '&amp;', ('is_company','=',False),
+						('parent_id','!=',False), ('type', '=', 'shop')
+						]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='vat']" position="after">
+					<field name="customer_rank" invisible="1"/>
+					<field name="social_security_number" attrs="{'invisible': [('customer_rank','&lt;=', 0)]}"/>
+				</xpath>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

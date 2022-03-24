@@ -4,5 +4,8 @@
 		<menuitem id="res_partner_menu_ophthalmologist"
 		          action="jf_base.res_partner_action_ophthalmologist"
 		          parent="sale.sale_order_menu" sequence="5"/>
+				<menuitem id="res_partner_menu_shop"
+		          action="jf_base.res_partner_action_shop"
+		          parent="sale.sale_order_menu" sequence="5"/>
 	</data>
 </odoo>

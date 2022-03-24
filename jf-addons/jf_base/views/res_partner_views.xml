@@ -6,13 +6,39 @@
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_partner_form"/>
 			<field name="arch" type="xml">
-				<xpath expr="//div[@name='button_box']/button[1]" position="inside">
-					<button class="oe_stat_button" type="action"
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button class="oe_stat_button" type="action" attrs="{'invisible': [('type', '=', 'shop')]}"
 					        name="%(eye_info_action_customer)d"
 					        icon="fa-eye">
 						<field string="Eyes infos" name="eye_info_count"
 						       widget="statinfo"/>
 					</button>
+				</xpath>
+				<xpath expr="//field[@name='function']" position="attributes">
+					<attribute name="attrs">{'invisible': ['|', ('is_company','=', True), ('type', '=', 'shop')]}</attribute>
+				</xpath>
+				<xpath expr="//field[@name='title']" position="attributes">
+					<attribute name="attrs">{'invisible': ['|', ('is_company','=', True), ('type', '=', 'shop')]}</attribute>
+				</xpath>
+				<xpath expr="//page[@name='sales_purchases']" position="after">
+					<page name="shop_infos" string="Shop infos" attrs="{'invisible': [('type', '!=', 'shop')]}">
+						<group>
+							<group>
+								<field name="opening_date"/>
+								<field name="closing_date"/>
+								<field name="status"/>
+								<field name="opening_time"/>
+								<field name="sales_area"/>
+								<field name="linear_area"/>
+							</group>
+						</group>
+					</page>
+				</xpath>
+				<xpath expr="//field[@name='vat']" position="after">
+					<field name="finess_number" attrs="{'invisible': [('type', '!=', 'shop')]}"/>
+				</xpath>
+				<xpath expr="//page[@name='sales_purchases']" position="attributes">
+					<attribute name="attrs">{'invisible': [('type', '=', 'shop')]}</attribute>
 				</xpath>
 			</field>
 		</record>
@@ -25,7 +51,7 @@
 					<separator/>
 					<filter string="Ophthalmologist" name="ophthalmologist"
 					        domain="[('type', '=', 'ophthalmologist')]"/>
-										<separator/>
+					<separator/>
 					<filter string="Shop" name="shop" domain="[('type', '=', 'shop')]"/>
 				</xpath>
 			</field>
@@ -38,6 +64,13 @@
 			<field name="context">{'search_default_ophthalmologist': 1,
 				'default_type': 'ophthalmologist'}
 			</field>
+		</record>
+		<record id="res_partner_action_shop" model="ir.actions.act_window">
+			<field name="name">Shop</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="context">{'search_default_shop': 1, 'default_type': 'shop'}</field>
 		</record>
 	</data>
 </odoo>
