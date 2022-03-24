@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<menuitem id="res_partner_menu_ophthalmologist"
-		          action="jf_base.res_partner_action_ophthalmologist"
-		          parent="point_of_sale.menu_point_of_sale" sequence="101"/>
 		
 		<record id="res_partner_action_shop" model="ir.actions.act_window">
 			<field name="name">Shop</field>

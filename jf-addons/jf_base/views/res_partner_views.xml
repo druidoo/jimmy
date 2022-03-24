@@ -49,20 +49,8 @@
 			<field name="arch" type="xml">
 				<xpath expr="//filter[@name='type_company']" position="after">
 					<separator/>
-					<filter string="Ophthalmologist" name="ophthalmologist"
-					        domain="[('type', '=', 'ophthalmologist')]"/>
-					<separator/>
 					<filter string="Shop" name="shop" domain="[('type', '=', 'shop')]"/>
 				</xpath>
-			</field>
-		</record>
-		<record id="res_partner_action_ophthalmologist" model="ir.actions.act_window">
-			<field name="name">Ophthalmologist</field>
-			<field name="type">ir.actions.act_window</field>
-			<field name="res_model">res.partner</field>
-			<field name="view_mode">kanban,tree,form</field>
-			<field name="context">{'search_default_ophthalmologist': 1,
-				'default_type': 'ophthalmologist'}
 			</field>
 		</record>
 		<record id="res_partner_action_shop" model="ir.actions.act_window">
