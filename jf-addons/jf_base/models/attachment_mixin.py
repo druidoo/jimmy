@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import api, models, fields, _
+from odoo.exceptions import UserError
 
 
 class AttachmentMixin(models.AbstractModel):
@@ -53,3 +54,10 @@ class AttachmentMixin(models.AbstractModel):
             "res_id": self.attachment_id.id,
             "target": "new",
         }
+
+    @api.constrains('attachment_name')
+    def check_filename(self):
+        tmp = self.attachment_name.split('.')
+        ext = tmp[len(tmp) - 1]
+        if ext not in ['pdf']:
+            raise UserError(_("Only pdf file is supported"))

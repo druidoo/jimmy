@@ -17,7 +17,8 @@
 								<field name="attachment_id" invisible="1"/>
 								<button name="action_open_prescription" class="oe_highlight oe_read_only" string="View prescription"
 								        type="object" icon="fa-file" attrs="{'invisible': [('attachment_id', '=', False)]}"/>
-								<field name="attachment_file" filename="attachment_name" widget="binary" class="oe_edit_only"/>
+								<field name="attachment_file" filename="attachment_name" widget="binary" class="oe_edit_only"
+								       options="{'accepted_file_extensions': '.pdf'}"/>
 								<field name="attachment_name" invisible="1"/>
 								<field name="prescription_date"/>
 							</group>
